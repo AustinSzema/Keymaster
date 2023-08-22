@@ -53,7 +53,7 @@ public class StringReader : MonoBehaviour
 
     /* TODO:
      * 
-     * ADD MOVING ENEMIES
+     * ~~CHECKAROONIE~~ ADD MOVING ENEMIES
      * ADD PROJECTILE/MELEE ATTACK 
      * ~~CHECKAROONIE~~ ADD DEATH PITS
      * ADD TELEPORTERS
