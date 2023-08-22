@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StringReader : MonoBehaviour
 {
@@ -27,6 +29,7 @@ public class StringReader : MonoBehaviour
     private string _explode = "KABOOM";
     private string _energy = "BANKAI";
     private string _rainbow = "SLAY";
+    private string _start = "START";
 
 
 
@@ -73,7 +76,7 @@ public class StringReader : MonoBehaviour
         _commandDictionary.Add(_rainbow, PlayRainbow);
         _commandDictionary.Add(_energy, PlayEnergy);
         _commandDictionary.Add(_explode, PlayExplosion);
-
+        _commandDictionary.Add(_start, NextScene);
     }
 
     // one line functions
@@ -84,6 +87,18 @@ public class StringReader : MonoBehaviour
     private void PlayRainbow() => _rainbowParticles.Play();
     private void PlayEnergy() => _energyParticles.Play();
     private void PlayExplosion() => _explosionParticles.Play();
+
+    private void NextScene()
+    {
+        Debug.Log("next scene");
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Debug.Log("transiitnonig to next scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+
 
 
 
@@ -117,7 +132,7 @@ public class StringReader : MonoBehaviour
                 Vector3 newPosition = _playerTransform.position + direction;
                 _playerTransform.position = newPosition;
 
-                if(direction != Vector3.down)
+                if (direction != Vector3.down)
                 {
                     _spriteTransform.rotation = Quaternion.Euler(0f, 0f, direction.x * -90f);
                 }
@@ -168,4 +183,6 @@ public class StringReader : MonoBehaviour
         _mainString.Value = "";
 
     }
+
+
 }
