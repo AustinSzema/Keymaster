@@ -15,9 +15,12 @@ public class MovingEnemy : MonoBehaviour
 
     private Vector3 _originalPos;
 
-    /// <summary>
-    /// [SerializeField] private Color[] _colors;
-    /// </summary>
+    [Header("Color Stuff")]
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Color _upColor;
+    [SerializeField] private Color _downColor;
+    [SerializeField] private Color _leftColor;
+    [SerializeField] private Color _rightColor;
 
     private void Start()
     {
@@ -25,23 +28,30 @@ public class MovingEnemy : MonoBehaviour
         switch (_direction)
         {
             case Direction.Up:
-                _offset = Vector3.up;
+                AssignValues(Vector3.up, _upColor);
                 break;
             case Direction.Down:
-                _offset = Vector3.down;
+                AssignValues(Vector3.down, _downColor);
                 break;
             case Direction.Left:
-                _offset = Vector3.left;
+                AssignValues(Vector3.left, _leftColor);
                 break;
 
             case Direction.Right:
-                _offset = Vector3.right;
+                AssignValues(Vector3.right, _rightColor);
                 break;
         }
 
         // Start the movement coroutine
         StartCoroutine(MoveEnemy());
     }
+
+    private void AssignValues(Vector3 direction, Color color)
+    {
+        _offset = direction;
+        _spriteRenderer.color = color;
+    }
+
 
     private IEnumerator MoveEnemy()
     {

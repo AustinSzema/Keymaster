@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class StringReader : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class StringReader : MonoBehaviour
     [SerializeField] private Transform _playerTransform;
     [SerializeField] private Transform _spriteTransform;
 
+    [SerializeField] private GameObject _projectileAttackPrefab;
+    
     private string _up = "UP";
     private string _down = "DOWN";
     private string _left = "LEFT";
@@ -28,6 +31,7 @@ public class StringReader : MonoBehaviour
     private string _energy = "BANKAI";
     private string _rainbow = "SLAY";
     private string _start = "START";
+    private string _attack = "ATTACK";
 
 
 
@@ -54,7 +58,9 @@ public class StringReader : MonoBehaviour
      * ~~CHECKAROONIE~~ ADD MOVING ENEMIES
      * ADD PROJECTILE/MELEE ATTACK 
      * ~~CHECKAROONIE~~ ADD DEATH PITS
-     * ADD TELEPORTERS
+     * ~~CHECKAROONIE~~ ADD TELEPORTERS
+     * TWO DIFFERENT ATTACKS
+     * A FAST PROJECTILE AND A MELEE THAT JUST SITS IN FRONT OF THE PLAYER FOR A FEW SECONDS
      * 
     */
 
@@ -75,6 +81,7 @@ public class StringReader : MonoBehaviour
         _commandDictionary.Add(_energy, PlayEnergy);
         _commandDictionary.Add(_explode, PlayExplosion);
         _commandDictionary.Add(_start, NextScene);
+        _commandDictionary.Add(_attack, Attack);
     }
 
     // one line functions
@@ -92,10 +99,20 @@ public class StringReader : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             Debug.Log("transiitnonig to next scene");
+            _commandDictionary.Remove(_start);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+    private void Attack()
+    {
+        if (!_projectileAttackPrefab.activeInHierarchy)
+        {
+            _projectileAttackPrefab.transform.forward = _spriteTransform.forward;
+            _projectileAttackPrefab.transform.position = _spriteTransform.position + Vector3.up;
 
+            _projectileAttackPrefab.SetActive(true);
+        }
+    }
 
 
 

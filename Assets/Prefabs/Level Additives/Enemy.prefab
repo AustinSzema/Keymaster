@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 5552050568723499638}
   - component: {fileID: 8643544580629187960}
   - component: {fileID: 8084889626728762715}
-  - component: {fileID: 1181442253665561446}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,27 +160,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyTransform: {fileID: 5222016025182782601}
-  _direction: 0
+  _direction: 1
   _waitTime: 1.5
---- !u!114 &1181442253665561446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3190509156116069606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4db80d1b9dfac4f9d19604101d8052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colors:
-  - {r: 1, g: 0.79760265, b: 0.46792454, a: 1}
-  - {r: 0.49622643, g: 1, b: 0.976293, a: 1}
-  - {r: 0.7645283, g: 0.4867925, b: 1, a: 1}
-  - {r: 0.990566, g: 0.42415136, b: 0.38875043, a: 1}
-  - {r: 0.99215686, g: 0.9804649, b: 0.38823533, a: 1}
   _spriteRenderer: {fileID: 2020862266850475396}
+  _upColor: {r: 0.49803922, g: 0.99607843, b: 0.9362893, a: 1}
+  _downColor: {r: 0.7879119, g: 0.5, b: 1, a: 1}
+  _leftColor: {r: 1, g: 0.5, b: 0.8199756, a: 1}
+  _rightColor: {r: 0.5484304, g: 0.49803922, b: 0.99607843, a: 1}
 --- !u!1001 &1034666841329190467
 PrefabInstance:
   m_ObjectHideFlags: 0
