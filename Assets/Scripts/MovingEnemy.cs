@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class MovingEnemy : MonoBehaviour
 {
@@ -16,6 +14,10 @@ public class MovingEnemy : MonoBehaviour
     private Vector3 _offset = Vector3.zero;
 
     private Vector3 _originalPos;
+
+    /// <summary>
+    /// [SerializeField] private Color[] _colors;
+    /// </summary>
 
     private void Start()
     {
