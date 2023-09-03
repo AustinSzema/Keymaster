@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyTransform: {fileID: 5222016025182782601}
-  _direction: 1
+  _direction: 0
   _waitTime: 1.5
   _spriteRenderer: {fileID: 2020862266850475396}
   _upColor: {r: 0.49803922, g: 0.99607843, b: 0.9362893, a: 1}

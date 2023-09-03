@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4256979574916513046}
   - component: {fileID: 3849841249687213546}
   - component: {fileID: 2970782047606742032}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Teleport Checker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
