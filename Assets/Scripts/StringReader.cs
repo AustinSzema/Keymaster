@@ -28,7 +28,7 @@ public class StringReader : MonoBehaviour
     private string _left = "LEFT";
     private string _right = "RIGHT";
     private string _explode = "KABOOM";
-    private string _energy = "BANKAI";
+    //private string _energy = "BANKAI";
     private string _rainbow = "SLAY";
     private string _start = "START";
     private string _attack = "ATTACK";
@@ -78,7 +78,7 @@ public class StringReader : MonoBehaviour
         _commandDictionary.Add(_left, MoveLeft);
         _commandDictionary.Add(_right, MoveRight);
         _commandDictionary.Add(_rainbow, PlayRainbow);
-        _commandDictionary.Add(_energy, PlayEnergy);
+        //_commandDictionary.Add(_energy, PlayEnergy);
         _commandDictionary.Add(_explode, PlayExplosion);
         _commandDictionary.Add(_start, NextScene);
         _commandDictionary.Add(_attack, Attack);
@@ -90,7 +90,7 @@ public class StringReader : MonoBehaviour
     private void MoveUp() => PlayerMove(Vector3.up);
     private void MoveDown() => PlayerMove(Vector3.down);
     private void PlayRainbow() => _rainbowParticles.Play();
-    private void PlayEnergy() => _energyParticles.Play();
+    //private void PlayEnergy() => _energyParticles.Play();
     private void PlayExplosion() => _explosionParticles.Play();
 
     private void NextScene()

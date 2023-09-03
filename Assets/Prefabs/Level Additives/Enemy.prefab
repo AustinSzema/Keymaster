@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2c62d8340228544980be8845e1b61a, type: 3}
-  m_Color: {r: 1, g: 0.6188213, b: 0, a: 1}
+  m_Color: {r: 0.49803922, g: 0.99607843, b: 0.9372549, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -164,8 +164,8 @@ MonoBehaviour:
   _waitTime: 1.5
   _spriteRenderer: {fileID: 2020862266850475396}
   _upColor: {r: 0.49803922, g: 0.99607843, b: 0.9362893, a: 1}
-  _downColor: {r: 0.7879119, g: 0.5, b: 1, a: 1}
-  _leftColor: {r: 1, g: 0.5, b: 0.8199756, a: 1}
+  _downColor: {r: 1, g: 0.61960787, b: 0, a: 1}
+  _leftColor: {r: 1, g: 0.94808906, b: 0.5019608, a: 1}
   _rightColor: {r: 0.5484304, g: 0.49803922, b: 0.99607843, a: 1}
 --- !u!1001 &1034666841329190467
 PrefabInstance:
