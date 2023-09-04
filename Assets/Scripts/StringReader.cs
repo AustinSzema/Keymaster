@@ -107,9 +107,6 @@ public class StringReader : MonoBehaviour
     {
         if (!_projectileAttackPrefab.activeInHierarchy)
         {
-            _projectileAttackPrefab.transform.forward = _spriteTransform.forward;
-            _projectileAttackPrefab.transform.position = _spriteTransform.position + Vector3.up;
-
             _projectileAttackPrefab.SetActive(true);
         }
     }

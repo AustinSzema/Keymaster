@@ -44,26 +44,11 @@ public class KeyPressDetector : MonoBehaviour
                             _mainString.Value = _mainString.Value.Remove(_mainString.Value.Length - 1);
                         }
                         break;
-                    case KeyCode.Tab:
-                        break;
-                    case KeyCode.Return:
-                        break;
-                    case KeyCode.Escape:
-                        break;
-                    case KeyCode.Space:
-                        break;
-                    case KeyCode.Mouse0:
-                        break;
-                    case KeyCode.RightArrow:
-                        if(_cursorPos < 1)
-                        _cursorPos += 1;
-                        break;
-                    case KeyCode.LeftArrow:
-                        if(_cursorPos > 0)
-                        _cursorPos -= 1;
-                        break;
                     default:
-                        AddKeyToMainString(key);
+                        if(key.ToString().Length == 1 && char.IsLetter(key.ToString().ToCharArray()[0]))
+                        {
+                            AddKeyToMainString(key);
+                        }
                         break;
                 }
             }
