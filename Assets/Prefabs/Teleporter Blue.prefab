@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8762484202049644580}
   - component: {fileID: 2760372711397380310}
   - component: {fileID: 8536152875023786792}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Teleporter Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,6 +431,10 @@ PrefabInstance:
     - target: {fileID: 3671895102521445759, guid: 056055af37f119742a55ed1cefcdefcb, type: 3}
       propertyPath: m_Name
       value: Energy Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671895102521445759, guid: 056055af37f119742a55ed1cefcdefcb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5919828229221829867, guid: 056055af37f119742a55ed1cefcdefcb, type: 3}
       propertyPath: m_LocalPosition.x
