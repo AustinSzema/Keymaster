@@ -153,6 +153,9 @@ public class StringReader : MonoBehaviour
                     _spriteTransform.rotation = Quaternion.Euler(0f, 0f, -180f);
                 }
 
+                MoveEnemies();
+
+
             }
 
             if (hit.collider == null)
@@ -171,6 +174,7 @@ public class StringReader : MonoBehaviour
                         {
                             _keyCount.Value--;
                             hit.transform.gameObject.SetActive(false);
+                            MoveEnemies();
                         }
                         break;
                     default:
@@ -194,6 +198,15 @@ public class StringReader : MonoBehaviour
     {
         _mainString.Value = "";
 
+    }
+
+    private void MoveEnemies()
+    {
+        MovingEnemy[] enemies = FindObjectsOfType<MovingEnemy>();
+        foreach (MovingEnemy enemy in enemies)
+        {
+            enemy.Move();
+        }
     }
 
 

@@ -43,7 +43,6 @@ public class MovingEnemy : MonoBehaviour
         }
 
         // Start the movement coroutine
-        StartCoroutine(MoveEnemy());
     }
 
     private void AssignValues(Vector3 direction, Color color)
@@ -53,18 +52,9 @@ public class MovingEnemy : MonoBehaviour
     }
 
 
-    private IEnumerator MoveEnemy()
+    public void Move()
     {
-        while (true)
-        {
-            Move(Vector3.Distance(_enemyTransform.position, _originalPos) < 0.01f);
-            yield return new WaitForSeconds(_waitTime);
-        }
-
-    }
-
-    private void Move(bool atOriginalPos)
-    {
+        bool atOriginalPos = Vector3.Distance(_enemyTransform.position, _originalPos) < 0.01f;
 
         float moveDirection = atOriginalPos ? 1.0f : -1.0f;
 
